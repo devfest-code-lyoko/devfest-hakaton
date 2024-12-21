@@ -19,7 +19,7 @@ public class UserRepo implements UserRepoInterface {
 
                 ResultSet rs = stmt.executeQuery();
                 if(rs.next()){
-                    return new User(
+                    User u = new User(
                         rs.getString("firstname"),
                         rs.getString("lastname"),
                         rs.getString("password"),
@@ -28,6 +28,9 @@ public class UserRepo implements UserRepoInterface {
                         rs.getString("address"),
                         rs.getString("subscription"),
                         rs.getString("mail"));
+
+                    System.out.println(u.toString());
+                    return u;
                 }
                 
              } catch(SQLException e){
@@ -57,6 +60,9 @@ public class UserRepo implements UserRepoInterface {
                         stm.setString(8, user.getMail());
 
                         stm.executeUpdate();
+
+                        System.out.println("uspelo");
+
                         return user;
                     } catch(SQLException e){
                         e.printStackTrace();

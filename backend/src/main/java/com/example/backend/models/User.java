@@ -69,5 +69,11 @@ public class User {
     public void setMail(String mail) {
         this.mail = mail;
     }
+    @Override
+    public String toString() {
+        return "User [firstname=" + firstname + ", lastname=" + lastname + ", password=" + password + ", username="
+                + username + ", type=" + type + ", address=" + address + ", subscription=" + subscription + ", mail="
+                + mail + "]";
+    }
 
 }
