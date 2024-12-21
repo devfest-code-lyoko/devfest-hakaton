@@ -30,8 +30,9 @@ export class LoginComponent {
           if (data == null) {
             this.error = 'This user does not exist!';
           } else {
-            alert("Ulogovan uspesno!")
-            localStorage.setItem('ulogovan', JSON.stringify(data));
+            this.router.navigate([`/${data.type}`], {
+              state: {user: data}
+            });
           }
         });
     }

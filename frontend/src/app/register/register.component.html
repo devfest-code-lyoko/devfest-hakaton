@@ -17,7 +17,7 @@
     <br>
     Type: 
     <select [(ngModel)]="type" name="type">
-        <option value="senior" default>Senior</option>
+        <option value="senior" selected>Senior</option>
         <option value="helper">Helper</option>
     </select>
 
@@ -25,14 +25,14 @@
     <br>
         Subscription:
     <select [(ngModel)]="subscription" name="subscription">
-        <option value="yearly" default>Yearly</option>
+        <option value="yearly" selected>Yearly</option>
         <option value="monthly">Monthly</option>
     </select>
 
     }
 
     <br><br>
-    <p>{{message}}</p>
+    <p style="color: red;">{{message}}</p>
     <button (click)="register()">SIGN UP</button>
 
 </form>
