@@ -23,4 +23,13 @@ export class UserService {
     }
     return this.http.post<User>(`${this.backPath}/register`, data)
   }
+
+  login(username: string, password: string){
+    const data = {
+      username: username,
+      password: password,
+    }
+    return this.http.post<User>(`${this.backPath}/login`, data)
+
+  }
 }
