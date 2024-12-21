@@ -35,10 +35,10 @@ public class ServiceRepo implements ServiceRepoInterface {
     }
 
     @Override
-    public Service getService(String name) {
+    public Service getService(int id) {
         try (Connection con = DB.source().getConnection();
-        PreparedStatement stmt = con.prepareStatement("select * from services where name = ?")){
-            stmt.setString(1, name);
+        PreparedStatement stmt = con.prepareStatement("select * from services where id = ?")){
+            stmt.setInt(1, id);
             ResultSet rs = stmt.executeQuery();
             if(rs.next()){
                 Service ser = new Service(

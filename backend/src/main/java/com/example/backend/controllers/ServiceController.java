@@ -25,8 +25,8 @@ public class ServiceController {
     }
 
     @PostMapping("/getService")
-    public Service getService(@RequestParam String name) {
-        return new ServiceRepo().getService(name);
+    public Service getService(@RequestParam int id) {
+        return new ServiceRepo().getService(id);
     }
     
     @PostMapping("/createService")
