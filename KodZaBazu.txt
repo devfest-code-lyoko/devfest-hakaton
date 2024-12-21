@@ -4,8 +4,8 @@ CREATE TABLE users (
     lastname VARCHAR(50) NOT NULL,     -- Surname of the user
     password VARCHAR(255) NOT NULL,  -- Password (consider hashing this)
     username VARCHAR(50) UNIQUE NOT NULL, -- Username (must be unique)
-    type ENUM('admin', 'user', 'guest') DEFAULT 'user', -- Type of user
-    address TEXT,                    -- Address of the user
-    subscription BOOLEAN DEFAULT FALSE, -- Subscription status (true/false)
+    type VARCHAR(50) NOT NULL, -- Type of user
+    address VARCHAR(50) NOT NULL,                    -- Address of the user
+    subscription VARCHAR(50), -- Subscription status
     mail VARCHAR(100) UNIQUE NOT NULL -- Email (must be unique)
 );
