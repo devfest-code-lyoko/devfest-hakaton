@@ -29,5 +29,4 @@ public class UserController {
         return new UserRepo().changePassword(username, password);
     }
     
-    
 }

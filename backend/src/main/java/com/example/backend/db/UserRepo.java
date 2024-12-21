@@ -76,7 +76,7 @@ public class UserRepo implements UserRepoInterface {
     @Override
     public int changePassword(String username, String password) {
         try(Connection conn = DB.source().getConnection();
-            PreparedStatement stmt = conn.prepareStatement("update services set password = ? where username = ?")){
+            PreparedStatement stmt = conn.prepareStatement("update users set password = ? where username = ?")){
                 stmt.setString(1, password);
                 stmt.setString(2, username);
                 return stmt.executeUpdate();

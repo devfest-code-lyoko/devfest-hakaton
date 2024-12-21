@@ -92,15 +92,15 @@ public class ServiceRepo implements ServiceRepoInterface {
     @Override
     public int pickService(User user, Service service) {
         try(Connection conn = DB.source().getConnection();
-            PreparedStatement stm = conn.prepareStatement("SELECT FROM services where id = ? and helper_username = ?")){
+            PreparedStatement stm = conn.prepareStatement("SELECT * FROM services WHERE id = ? AND helper_username IS NULL")){
                 stm.setInt(1, service.getId());
-                stm.setString(2, null);
                 
                 ResultSet res = stm.executeQuery();
                 if(res.next()){
-                    try(PreparedStatement stmt = conn.prepareStatement("INSERT INTO services (helper_username) VALUES (?)")) {
+                    try(PreparedStatement stmt = conn.prepareStatement("UPDATE services SET helper_username = ? WHERE id = ?")) {
                             stmt.setString(1, user.getUsername());
-                            return stm.executeUpdate();
+                            stmt.setInt(2, service.getId());
+                            return stmt.executeUpdate();
                     } catch(SQLException e) {
                         e.printStackTrace();
                     }
