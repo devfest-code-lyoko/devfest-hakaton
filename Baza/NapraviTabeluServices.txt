@@ -4,4 +4,6 @@ CREATE TABLE services (
     description TEXT NOT NULL,
     address VARCHAR(255) NOT NULL,
     price INT NOT NULL
+    name VARCHAR(255) NOT NULL,
+    helper_username VARCHAR(255)
 );
