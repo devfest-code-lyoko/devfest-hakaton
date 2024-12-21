@@ -1,0 +1,6 @@
+INSERT INTO users (firstname, lastname, password, username, type, address, subscription, mail) 
+VALUES
+('John', 'Doe', 'hashed_password_123', 'johndoe', 'admin', '123 Main St', 'active', 'john.doe@example.com'),
+('Jane', 'Smith', 'hashed_password_456', 'janesmith', 'user', '456 Elm St', 'inactive', 'jane.smith@example.com'),
+('Alice', 'Johnson', 'hashed_password_789', 'alicej', 'user', '789 Oak St', 'active', 'alice.johnson@example.com'),
+('Bob', 'Brown', 'hashed_password_012', 'bobbrown', 'guest', '101 Maple St', 'none', 'bob.brown@example.com');
