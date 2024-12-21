@@ -32,4 +32,12 @@ export class UserService {
     return this.http.post<User>(`${this.backPath}/login`, data)
 
   }
+
+  changePassword(username: string, password: string){
+    const data = {
+      username: username,
+      password: password,
+    }
+    return this.http.post<User>(`${this.backPath}/changePassword`, data)
+  }
 }

@@ -23,10 +23,9 @@ export class ProvideComponent implements OnInit{
 
   chooseService(id: number){
     this.service.chooseService(id).subscribe(data=>{
-      /*
       this.router.navigate([`/viewservice`], {
         state: {service: data}
-      });*/
+      });
       alert(data.name)
     })
   }

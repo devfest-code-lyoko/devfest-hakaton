@@ -24,12 +24,11 @@ export class LoginComponent {
       this.error = "Please enter password!";
     }
     else {
-      //alert(this.username);
-      //alert(this.password);
       this.userService.login(this.username, this.password).subscribe(data => {
           if (data == null) {
             this.error = 'This user does not exist!';
           } else {
+            alert("Uspesno se prijavio")
             this.router.navigate([`/${data.type}`], {
               state: {user: data}
             });

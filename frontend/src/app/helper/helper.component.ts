@@ -32,4 +32,16 @@ export class HelperComponent implements OnInit{
     });
   }
 
+  viewProfile(){
+    this.router.navigate([`/viewProfile`], {
+      state: {user: this.user}
+    })
+  }
+
+  settings(){
+    this.router.navigate([`/settings`], {
+      state: {user: this.user}
+    })
+  }
+
 }
