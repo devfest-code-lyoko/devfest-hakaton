@@ -3,5 +3,6 @@ CREATE TABLE services (
     senior_username VARCHAR(255) NOT NULL,
     description TEXT NOT NULL,
     address VARCHAR(255) NOT NULL,
-    price INT NOT NULL
+    price INT NOT NULL,
+    name VARCHAR(255) NOT NULL
 );
