@@ -12,7 +12,6 @@ import com.example.backend.models.User;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestParam;
 
 
 
@@ -25,8 +24,8 @@ public class ServiceController {
     }
 
     @PostMapping("/getService")
-    public Service getService(@RequestParam int id) {
-        return new ServiceRepo().getService(id);
+    public Service getService(@RequestBody Service service) {
+        return new ServiceRepo().getService(service.getId());
     }
     
     @PostMapping("/createService")
