@@ -72,4 +72,19 @@ public class UserRepo implements UserRepoInterface {
         }
         return null;
     }
+
+    @Override
+    public int changePassword(String username, String password) {
+        try(Connection conn = DB.source().getConnection();
+            PreparedStatement stmt = conn.prepareStatement("update services set password = ? where username = ?")){
+                stmt.setString(1, password);
+                stmt.setString(2, username);
+                return stmt.executeUpdate();
+
+
+        } catch(SQLException e) {
+            e.printStackTrace();
+        }
+        return -1;
+    }
 }

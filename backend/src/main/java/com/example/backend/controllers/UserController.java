@@ -16,14 +16,18 @@ public class UserController {
     
     @PostMapping("/login")
     public User login(@RequestBody User entity) {
-        
         return new UserRepo().login(entity);
     }
     
     @PostMapping("/register")
     public User register(@RequestBody User entity) {
-        
         return new UserRepo().register(entity);
     }
+
+    @PostMapping("/changePassword")
+    public int changePassword(@RequestBody String username, @RequestBody String password) {
+        return new UserRepo().changePassword(username, password);
+    }
+    
     
 }
