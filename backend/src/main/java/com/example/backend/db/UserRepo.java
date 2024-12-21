@@ -74,11 +74,11 @@ public class UserRepo implements UserRepoInterface {
     }
 
     @Override
-    public int changePassword(String username, String password) {
+    public int changePassword(User user) {
         try(Connection conn = DB.source().getConnection();
             PreparedStatement stmt = conn.prepareStatement("update users set password = ? where username = ?")){
-                stmt.setString(1, password);
-                stmt.setString(2, username);
+                stmt.setString(1, user.getPassword());
+                stmt.setString(2, user.getUsername());
                 return stmt.executeUpdate();
 
 

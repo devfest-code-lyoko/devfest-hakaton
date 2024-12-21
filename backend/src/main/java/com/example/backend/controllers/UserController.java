@@ -25,8 +25,8 @@ public class UserController {
     }
 
     @PostMapping("/changePassword")
-    public int changePassword(@RequestBody String username, @RequestBody String password) {
-        return new UserRepo().changePassword(username, password);
+    public int changePassword(@RequestBody User entity) {
+        return new UserRepo().changePassword(entity);
     }
     
 }
