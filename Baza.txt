@@ -1,0 +1,36 @@
+CREATE TABLE users (
+    id INT AUTO_INCREMENT PRIMARY KEY, -- Unique identifier for each user
+    firstname VARCHAR(50) NOT NULL,   -- First name of the user
+    lastname VARCHAR(50) NOT NULL,     -- Surname of the user
+    password VARCHAR(255) NOT NULL,  -- Password (consider hashing this)
+    username VARCHAR(50) UNIQUE NOT NULL, -- Username (must be unique)
+    type VARCHAR(50) NOT NULL, -- Type of user
+    address VARCHAR(50) NOT NULL,                    -- Address of the user
+    subscription VARCHAR(50), -- Subscription status
+    mail VARCHAR(100) UNIQUE NOT NULL -- Email (must be unique)
+);
+
+CREATE TABLE services (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    senior_username VARCHAR(255) NOT NULL,
+    description TEXT NOT NULL,
+    address VARCHAR(255) NOT NULL,
+    price INT NOT NULL,
+    name VARCHAR(255) NOT NULL,
+    helper_username VARCHAR(255)
+);
+
+INSERT INTO users (firstname, lastname, password, username, type, address, subscription, mail) 
+VALUES
+('John', 'Doe', 'hashed_password_123', 'johndoe', 'senior', '123 Main St', 'monthly', 'john.doe@example.com'),
+('Jane', 'Smith', 'hashed_password_456', 'janesmith', 'senior', '456 Elm St', 'yearly', 'jane.smith@example.com'),
+('Alice', 'Johnson', 'hashed_password_789', 'alicej', 'helper', '789 Oak St', NULL, 'alice.johnson@example.com'),
+('Bob', 'Brown', 'hashed_password_012', 'bobbrown', 'helper', '101 Maple St', NULL, 'bob.brown@example.com');
+
+INSERT INTO services (senior_username, name, description, address, price)
+VALUES
+    ('john_doe', 'Gardening', 'Gardening service, including mowing and trimming.', '123 Greenway Blvd, Springfield', 50),
+    ('jane_smith', 'Home Cleaning', 'Home cleaning and organization.', '456 Elm St, Shelbyville', 70),
+    ('peter_parker', 'Window Cleaning', 'Window cleaning for homes and offices.', '789 Maple Ave, Metropolis', 60),
+    ('clark_kent', 'Handyman Services', 'General handyman services.', '101 Broadway, Gotham City', 100),
+    ('diana_prince', 'Fitness Training', 'Personal fitness training and yoga sessions.', '202 Wonder Lane, Amazonia', 120);
