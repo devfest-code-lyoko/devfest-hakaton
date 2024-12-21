@@ -1,7 +1,0 @@
-INSERT INTO services (senior_username, name, description, address, price)
-VALUES
-    ('john_doe', 'Gardening', 'Gardening service, including mowing and trimming.', '123 Greenway Blvd, Springfield', 50),
-    ('jane_smith', 'Home Cleaning', 'Home cleaning and organization.', '456 Elm St, Shelbyville', 70),
-    ('peter_parker', 'Window Cleaning', 'Window cleaning for homes and offices.', '789 Maple Ave, Metropolis', 60),
-    ('clark_kent', 'Handyman Services', 'General handyman services.', '101 Broadway, Gotham City', 100),
-    ('diana_prince', 'Fitness Training', 'Personal fitness training and yoga sessions.', '202 Wonder Lane, Amazonia', 120);
