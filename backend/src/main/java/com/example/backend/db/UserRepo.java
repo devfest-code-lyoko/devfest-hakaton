@@ -12,10 +12,9 @@ public class UserRepo implements UserRepoInterface {
     @Override
     public User login(User user) {
         try(Connection conn = DB.source().getConnection();
-            PreparedStatement stmt = conn.prepareStatement("select * from users where username = ? and password = ? and type = ?")) {
+            PreparedStatement stmt = conn.prepareStatement("select * from users where username = ? and password = ?")) {
                 stmt.setString(1, user.getUsername());
                 stmt.setString(2, user.getPassword());
-                stmt.setString(3, user.getType());
 
                 ResultSet rs = stmt.executeQuery();
                 if(rs.next()){
@@ -60,8 +59,6 @@ public class UserRepo implements UserRepoInterface {
                         stm.setString(8, user.getMail());
 
                         stm.executeUpdate();
-
-                        System.out.println("uspelo");
 
                         return user;
                     } catch(SQLException e){
