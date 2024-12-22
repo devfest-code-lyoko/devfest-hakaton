@@ -1,11 +1,18 @@
-<p>settings works!</p>
-<p>Settings</p>
+<section id="settings-page">
+    <div class="container">
+        <div class="settings-content-container">
+            <div class="section-header">
+                <h2>Settings</h2>
+            </div>
 
-<h3>Change current password</h3>
-<form>
-    New password: 
-    <input type="password" [(ngModel)]="password" name="password" required>
-    <br><br><br>
-    <button (click)="changePassword()">Change password</button>
-    {{message}}
-</form>
+            <h3>Change current password</h3>
+            <form>
+                <label for="password">New password:</label>
+                <input type="password" [(ngModel)]="password" name="password" required>
+                <br><br><br>
+                <button class="btn" (click)="changePassword()">Change password</button>
+                <p>{{message}}</p>
+            </form>
+        </div>
+    </div>
+</section>

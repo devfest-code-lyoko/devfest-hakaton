@@ -28,7 +28,6 @@ export class LoginComponent {
           if (data == null) {
             this.error = 'This user does not exist!';
           } else {
-            alert("Uspesno se prijavio")
             this.router.navigate([`/${data.type}`], {
               state: {user: data}
             });

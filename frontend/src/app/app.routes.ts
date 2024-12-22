@@ -8,6 +8,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { RequestComponent } from './request/request.component';
 import { SettingsComponent } from './settings/settings.component';
 import { ViewserviceComponent } from './viewservice/viewservice.component';
+import { StartComponent } from './start/start.component';
 
 export const routes: Routes = [
     {path: "register", component: RegisterComponent},
@@ -18,5 +19,6 @@ export const routes: Routes = [
     {path: "viewProfile", component: ProfileComponent},
     {path: "request", component: RequestComponent},
     {path: "settings", component: SettingsComponent},
-    {path: "viewservice", component: ViewserviceComponent}
+    {path: "viewservice", component: ViewserviceComponent},
+    {path: "", component: StartComponent}
 ];

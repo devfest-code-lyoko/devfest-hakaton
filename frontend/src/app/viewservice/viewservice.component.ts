@@ -19,6 +19,8 @@ export class ViewserviceComponent implements OnInit{
   name = ""
   helperUsername = ""
   service : Service = new Service()
+
+  accepted = true
   
 
   ngOnInit(): void {
@@ -29,8 +31,19 @@ export class ViewserviceComponent implements OnInit{
       this.address = this.service.address
       this.price = this.service.price
       this.name = this.service.name
-      this.helperUsername = this.service.helper_username
+      if(this.service.helper_username == null){
+        this.accepted=false
+        this.helperUsername = "The service is not yet accepted"
+      } else{
+        this.helperUsername = this.service.helper_username
+      }
+      
+       
     }
+  }
+
+  back(){
+
   }
 
 }

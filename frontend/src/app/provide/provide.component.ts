@@ -26,7 +26,6 @@ export class ProvideComponent implements OnInit{
       this.router.navigate([`/viewservice`], {
         state: {service: data}
       });
-      alert(data.name)
     })
   }
   

@@ -1,9 +1,18 @@
-<p>senior works!</p>
-<p>senior works!</p>
-<h1>Welcome back {{usrname}}!</h1>
-<form>
-    <button (click)="requestAService()">Request a service</button> <br>
-    <button (click)="viewProfile()">My profile</button> <br>
-    <button (click)="settings()">Settings</button> <br>
-    <button (click)="logout()">Logout</button> <br>
-</form>
+<section id="senior-page">
+    <!-- Logout Button in the Far Left Corner -->
+    <button class="logout-btn" (click)="logout()">Logout</button>
+    
+    <div class="container">
+        <div class="senior-content-container">
+            <div class="welcome-message">
+                <h3>Welcome back, {{usrname}}!</h3>
+            </div>
+  
+            <div class="button-container">
+                <button class="bigbtn" (click)="requestAService()">Request a service</button>
+                <button class="smallbtn" (click)="viewProfile()">My profile</button>
+                <button class="smallbtn" (click)="settings()">Settings</button>
+            </div>
+        </div>
+    </div>
+</section>

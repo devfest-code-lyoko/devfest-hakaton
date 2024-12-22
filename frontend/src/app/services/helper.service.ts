@@ -15,7 +15,6 @@ export class HelperService {
   }
 
   chooseService(id: number){
-    alert(id)
     const data={
       id: id
     }
