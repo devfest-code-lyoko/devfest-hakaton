@@ -33,9 +33,8 @@ VALUES
     ('jane_smith', 'Housekeeping', 'Home cleaning and organization.', '456 Elm St, Shelbyville', 70),
     ('peter_parker', 'Housekeeping', 'Making breakfast and lunch.', '789 Maple Ave, Metropolis', 60),
     ('clark_kent', 'Handyman Services', 'Plumbing and furniture assembling.', '101 Broadway, Gotham City', 100),
-    ('diana_prince', 'Groceries shopping', 'Shopping for bread, milk, butter and chicken.', '202 Wonder Lane, Amazonia', 120);
-    ('garry_potter', 'Medicine delivery', 'Atorvastatin, Metformin, Levothyroxine.', '30 Parkfield', 90);
-    ('bob_white', 'Taxi service', 'Going to a doctor.', '782 Orchard Drive
-Sunnyvale, CA 94087', 50);
-    ('charlie_richardson', 'Taxi service', 'Going to a hairdresser.', '1456 Maple Avenue Springfield, IL 62704', 10);
+    ('diana_prince', 'Groceries shopping', 'Shopping for bread, milk, butter and chicken.', '202 Wonder Lane, Amazonia', 120),
+    ('garry_potter', 'Medicine delivery', 'Atorvastatin, Metformin, Levothyroxine.', '30 Parkfield', 90),
+    ('bob_white', 'Taxi service', 'Going to a doctor.', '782 Orchard Drive Sunnyvale, CA 94087', 50),
+    ('charlie_richardson', 'Taxi service', 'Going to a hairdresser.', '1456 Maple Avenue Springfield, IL 62704', 10),
     ('amanda_collins', 'Animal care', 'Husky, 30 minutes walk in a park.', '411 Cedar Lane Portland, OR 97209', 70);
