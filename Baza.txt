@@ -22,10 +22,19 @@ CREATE TABLE services (
 
 INSERT INTO users (firstname, lastname, password, username, type, address, subscription, mail) 
 VALUES
-('John', 'Doe', 'hashed_password_123', 'johndoe', 'senior', '123 Main St', 'monthly', 'john.doe@example.com'),
-('Jane', 'Smith', 'hashed_password_456', 'janesmith', 'senior', '456 Elm St', 'yearly', 'jane.smith@example.com'),
-('Alice', 'Johnson', 'hashed_password_789', 'alicej', 'helper', '789 Oak St', NULL, 'alice.johnson@example.com'),
-('Bob', 'Brown', 'hashed_password_012', 'bobbrown', 'helper', '101 Maple St', NULL, 'bob.brown@example.com');
+('John', 'Doe', '123', 'john_doe', 'senior', '123 Main St', 'monthly', 'john.doe@gmail.com'),
+('Jane', 'Smith', '123', 'jane_smith', 'senior', '456 Elm St', 'yearly', 'jane.smith@gmail.com'),
+('Alice', 'Johnson', '123', 'alicej', 'helper', '789 Oak St', NULL, 'alice.johnson@gmail.com'),
+('Bob', 'Brown', '123', 'bobbrown', 'helper', '101 Maple St', NULL, 'bob.brown@gmail.com'),
+('Peter', 'Parker', '123', 'peter_parker', 'senior', '789 Maple Ave, Metropolis', 'monthly', 'peter.parker@gmail.com'),
+('Clark', 'Kent', '123', 'clark_kent', 'senior', '101 Broadway, Gotham City', 'yearly', 'clark.kent@gmail.com'),
+('Diana', 'Prince', '123', 'diana_prince', 'senior', '202 Wonder Lane, Amazonia', 'yearly', 'diana.prince@gmail.com'),
+('Garry', 'Potter', '123', 'garry_potter', 'senior', '30 Parkfield', 'monthly', 'garry.potter@gmail.com'),
+('Bob', 'White', '123', 'bob_white', 'senior', '782 Orchard Drive Sunnyvale, CA 94087', 'monthly', 'bob.white@gmail.com'),
+('Charlie', 'Richardson', '123', 'charlie_richardson', 'senior', '1456 Maple Avenue Springfield, IL 62704', 'yearly',
+'charlie.richardson@gmail.com'),
+('Amanda', 'Collins', '123', 'amanda_collins', 'senior', '411 Cedar Lane Portland, OR 97209', 'yearly', 'amanda.collins@gmail.com');
+
 
 INSERT INTO services (senior_username, name, description, address, price)
 VALUES
