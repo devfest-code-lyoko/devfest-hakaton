@@ -3,7 +3,6 @@ package com.example.backend.db;
 import java.util.ArrayList;
 
 import com.example.backend.models.Service;
-import com.example.backend.models.User;
 
 public interface ServiceRepoInterface {
 
@@ -11,5 +10,5 @@ public interface ServiceRepoInterface {
     public Service getService(int id);
     public int createService(Service service);
     public int removeService(Service service);
-    public int pickService(User user, Service service);
+    public int pickService(Service service);
 }

@@ -7,7 +7,6 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 
 import com.example.backend.models.Service;
-import com.example.backend.models.User;
 
 public class ServiceRepo implements ServiceRepoInterface {
 
@@ -92,7 +91,7 @@ public class ServiceRepo implements ServiceRepoInterface {
     }
 
     @Override
-    public int pickService(User user, Service service) {
+    public int pickService(Service service) {
         try(Connection conn = DB.source().getConnection();
             PreparedStatement stm = conn.prepareStatement("SELECT * FROM services WHERE id = ? AND helper_username IS NULL")){
                 stm.setInt(1, service.getId());
@@ -100,7 +99,7 @@ public class ServiceRepo implements ServiceRepoInterface {
                 ResultSet res = stm.executeQuery();
                 if(res.next()){
                     try(PreparedStatement stmt = conn.prepareStatement("UPDATE services SET helper_username = ? WHERE id = ?")) {
-                            stmt.setString(1, user.getUsername());
+                            stmt.setString(1, service.getHelper_username());
                             stmt.setInt(2, service.getId());
                             return stmt.executeUpdate();
                     } catch(SQLException e) {

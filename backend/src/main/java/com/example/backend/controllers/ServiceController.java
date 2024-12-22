@@ -39,8 +39,8 @@ public class ServiceController {
     }
 
     @PostMapping("/pickService")
-    public int pickService(@RequestBody User user, @RequestBody Service service) {
-        return new ServiceRepo().pickService(user, service);
+    public int pickService(@RequestBody Service service) {
+        return new ServiceRepo().pickService(service);
     }
     
 }
