@@ -14,6 +14,7 @@ public class DB {
         dmds.setDriverClassName("com.mysql.cj.jdbc.Driver");
         dmds.setUrl("jdbc:mysql://localhost:3306/seniero");
         dmds.setUsername("root");
+        dmds.setPassword("1234");
 
         return dmds;
     }

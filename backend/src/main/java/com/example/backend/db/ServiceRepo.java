@@ -24,7 +24,8 @@ public class ServiceRepo implements ServiceRepoInterface {
                     rs.getString("description"),
                     rs.getString("address"),
                     rs.getInt("price"),
-                    rs.getString("name"));
+                    rs.getString("name"),
+                    rs.getString("helper_username"));
                 allServices.add(b);
             }
             return allServices;
@@ -47,7 +48,8 @@ public class ServiceRepo implements ServiceRepoInterface {
                     rs.getString("description"),
                     rs.getString("address"),
                     rs.getInt("price"),
-                    rs.getString("name"));
+                    rs.getString("name"),
+                    rs.getString("helper_username"));
 
                 return ser;
             }      

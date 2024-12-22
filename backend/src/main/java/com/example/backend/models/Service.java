@@ -10,14 +10,14 @@ public class Service {
     private String name;
     private String helper_username;
     
-    public Service(int id, String username, String description, String address, int price, String name) {
+    public Service(int id, String username, String description, String address, int price, String name, String helper_username) {
         this.id = id;
         this.senior_username = username;
         this.description = description;
         this.address = address;
         this.price = price;
         this.name = name;
-        this.helper_username = null;
+        this.helper_username = helper_username;
     }
 
     public String getSenior_username() {
