@@ -83,7 +83,7 @@ button {
 
 /* Larger button class (for other buttons) */
 .smallbtn {
-    width: 200px; /* Adjust size of small button */
+    width: 220px; /* Adjust size of small button */
 }
 .bigbtn {
     width: 100%; /* Adjust size of small button */

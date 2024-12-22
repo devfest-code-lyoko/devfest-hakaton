@@ -20,7 +20,7 @@ export class RequestComponent implements OnInit{
     }
   }
 
-  back(){
+  goBack(){
     this.router.navigate([`/${this.user.type}`], {
       state: {user: this.user}
     })

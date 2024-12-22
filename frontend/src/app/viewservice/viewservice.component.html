@@ -18,7 +18,7 @@
                 </tr>
                 <tr>
                     <td>Price</td>
-                    <td>{{price}}</td>
+                    <td>{{price}}$</td>
                 </tr>
                 <tr>
                     <td>Name of the Service</td>
@@ -31,6 +31,13 @@
             </table>
 
             <div class="button-container">
+                @if(!accepted){
+                    <button (click)="acceptService()">Accept</button>
+                    <br><br>
+                }
+                @if(isme){
+                    <button (click)="finishService()">Finish</button> <br><br>
+                }
                 <button (click)="back()">Go back</button>
             </div>
         </div>

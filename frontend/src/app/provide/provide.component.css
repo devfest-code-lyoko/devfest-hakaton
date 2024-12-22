@@ -88,7 +88,7 @@ tr:hover {
 }
 
 button {
-    padding: 6px 12px;
+    padding:  12px 20px;
     background-color: #1e90ff; /* Blue button */
     color: #fff;
     border: none;
@@ -139,4 +139,14 @@ button:hover {
     color: #003366;
     text-align: center;
     margin-top: 20px;
+}
+
+/* Button container */
+.button-container {
+    margin-top: 30px;
+    margin-left: 220px;
+    text-align: center; /* Center content horizontally */
+    display: flex; /* Use flexbox for alignment */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically (if needed) */
 }

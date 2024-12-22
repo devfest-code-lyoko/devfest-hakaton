@@ -239,9 +239,9 @@ body {
   #login h2, #register h2 {
     text-align: center;
   }
+
   
   /* Smooth scroll effect */
   html {
     scroll-behavior: smooth; /* Smooth scroll */
   }
-  

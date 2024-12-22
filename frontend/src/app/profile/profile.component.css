@@ -20,8 +20,9 @@ section {
 /* Container for the sections */
 .container {
     width: 80%;
+    height: 100vh;
     margin: 0 auto;
-    padding: 50px 0;
+    padding: 0px 0;
     position: relative;
     padding-top: 80px; /* Offset for fixed navbar */
 }

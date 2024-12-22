@@ -29,16 +29,24 @@ export class SettingsComponent implements OnInit{
   changePassword(){
     //alert(this.password)
     //alert(this.u.username)
+    if(this.password==""){
+      return
+    }
     this.u.password = this.password
     this.service.changePassword(this.u.username, this.u.password).subscribe(data=>{
       if(data==null){
         this.message="Invalid data"
       } else{
-        alert(data.password)
         this.message = "Successfully changed password!"
       }
     })
 
+  }
+
+  goBack(){
+    this.router.navigate([`/${this.u.type}`], {
+      state: {user: this.u}
+    })
   }
 
 }
